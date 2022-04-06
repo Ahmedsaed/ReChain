@@ -1,4 +1,4 @@
-# MLH Haacker Portal - Deso project
+# MLH Hacker Portal - Deso project
 
 ### [Try It Out](https://ahmedsaed.me/MLH-Hacker-Protal/)
 
