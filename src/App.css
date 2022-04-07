@@ -14,6 +14,7 @@
   padding: 10px;
 
   max-width: 900px;
+  min-height: 500px;
   margin: 0px auto;
 
   background: rgba( 103, 108, 232, 0.2 );
@@ -66,10 +67,6 @@
 
 .panel-btn:active {
   transform: scale(0.9);
-}
-
-.welcome-msg {
-  font-size: 20px;
 }
 
 .post-group {

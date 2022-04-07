@@ -1,0 +1,32 @@
+.profile {
+    margin: 10px auto;
+    width: 40%;
+    min-height: 100px;
+    padding: 12px 8px;
+
+    border: 2px solid #ccc;
+    border-radius: 8px;
+
+    background-color: rgb(80, 148, 226, 0.3);
+
+    font-size: 18px;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.profile-img {
+    border-radius: 10px;
+    margin: 0px 15px 0px 5px;
+}
+
+.profile-data {
+    color: white;
+}
+
+.welcome-msg {
+    font-size: 18px;
+}

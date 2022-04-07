@@ -3,6 +3,7 @@ import Deso from "deso-protocol";
 import { useState } from "react";
 import Home from "./components/Home";
 import Post from "./components/Post";
+import NFTGallery from "./components/NFTGallery";
 
 const deso = new Deso();
 function App() {
@@ -22,20 +23,20 @@ function App() {
     async function showHome() {
         if (!sampleResponse) {
             const user = await deso.identity.login();
-            console.log(user);
+            // console.log(user);
             setLoginResponse(JSON.stringify(user, null, 2));
             
             const userInfo = await deso.user.getSingleProfile({
                 PublicKeyBase58Check: deso.identity.getUserKey(),
             });
 
-            console.log(userInfo);
+            // console.log(userInfo);
             setSampleResponse(userInfo);
-            console.log(sampleResponse);
+            // console.log(sampleResponse);
         }
         else {
             setShowPostPanel(false);
-            setShowNFTPanel(false)
+            setShowNFTPanel(false);
         }
 
         const request = {
@@ -44,7 +45,7 @@ function App() {
         const response = await deso.notification.getUnreadNotificationsCount(request);
         
         setNUnreadNot(response);
-        console.log(response);
+        // console.log(response);
     }
 
     async function showPost() {
@@ -53,6 +54,8 @@ function App() {
     }
     
     async function showNFTGallery() {
+        if (!sampleResponse)
+            return;
         const request = {
             "ReaderPublicKeyBase58Check": "BC1YLheA3NepQ8Zohcf5ApY6sYQee9aPJCPY6m3u6XxCL57Asix5peY"
         };
@@ -60,7 +63,7 @@ function App() {
         
         setNFTResponse(response);
         setShowNFTPanel(true);
-        
+        setShowPostPanel(false);
     }
     
     async function logout() {
@@ -69,7 +72,7 @@ function App() {
         setSampleResponse(undefined);
         setShowPostPanel(false);
     }
-    
+
     return (
         <div className="App">
             <h1 className="main-header">MLH Hacker Portal</h1>
@@ -102,24 +105,20 @@ function App() {
                         Logout
                     </button>
                 </div>
-                <Home loginResponse={loginResponse} sampleResponse={sampleResponse} nUnreadNot={nUnreadNot} showPostPanel={showPostPanel} showNFTPanel={showNFTPanel} />
+                {
+                    !showPostPanel && !showNFTPanel &&
+                    <Home loginResponse={loginResponse} sampleResponse={sampleResponse} nUnreadNot={nUnreadNot} showPostPanel={showPostPanel} showNFTPanel={showNFTPanel} />
+                }
                 {
                     showPostPanel && loginResponse && sampleResponse && !showNFTPanel &&
                     <Post showPostPanel={showPostPanel} loginResponse={loginResponse} sampleResponse={sampleResponse} postContent={postContent} handlePostInput={handlePostInput} postResponse={postResponse} setPostResponse={setPostResponse}  />
                 }
-                <div className="nft-gallery">
-                    {
-                        NFTResponse && NFTResponse.data.NFTCollections.slice(10, 20).map((element, index) => {
-                            return (<img key={index} src={element.PostEntryResponse.ImageURLs[0]} alt="NFT" className="NFTimage"></img>)
-                        })
-                    }
-                </div>
+                {
+                    showNFTPanel && !showPostPanel && <NFTGallery NFTResponse={NFTResponse} />
+                }
             </div>
         </div>
     );
 }
 
 export default App;
-
-
-    
