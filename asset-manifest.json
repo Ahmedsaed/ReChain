@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MLH-Hacker-Protal/static/css/main.8a08be25.css",
-    "main.js": "/MLH-Hacker-Protal/static/js/main.d5145ffa.js",
+    "main.css": "/MLH-Hacker-Protal/static/css/main.e424177b.css",
+    "main.js": "/MLH-Hacker-Protal/static/js/main.5ff9edf1.js",
     "static/js/787.1f613130.chunk.js": "/MLH-Hacker-Protal/static/js/787.1f613130.chunk.js",
     "index.html": "/MLH-Hacker-Protal/index.html",
-    "main.8a08be25.css.map": "/MLH-Hacker-Protal/static/css/main.8a08be25.css.map",
-    "main.d5145ffa.js.map": "/MLH-Hacker-Protal/static/js/main.d5145ffa.js.map",
+    "main.e424177b.css.map": "/MLH-Hacker-Protal/static/css/main.e424177b.css.map",
+    "main.5ff9edf1.js.map": "/MLH-Hacker-Protal/static/js/main.5ff9edf1.js.map",
     "787.1f613130.chunk.js.map": "/MLH-Hacker-Protal/static/js/787.1f613130.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a08be25.css",
-    "static/js/main.d5145ffa.js"
+    "static/css/main.e424177b.css",
+    "static/js/main.5ff9edf1.js"
   ]
 }
