@@ -32,22 +32,22 @@ jobs:
     - name: Cache dependencies
       uses: actions/cache@v2
       with:
-        path: |
-          **/node_modules
-        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+        path: ./node_modules
+        key: modules-${{ hashFiles('package-lock.json') }}
       
     - name: Install dependencies
-      run: npm install
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm ci --ignore-scripts
 
     - name: Build
-      run: npm run build
+      run: CI=false npm run build
       
     - name: Deploy
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
         git remote set-url origin https://${github_token}@github.com/${repository}
-        npm run deploy
+        CI=false npm run deploy
       env:
         user_name: 'Ahmedsaed'
         user_email: 'ahmedsaed2652003@gmail.com'
