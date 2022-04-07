@@ -6,22 +6,14 @@ const deso = new Deso();
 
 export default function Home({loginResponse, sampleResponse, nUnreadNot, showPostPanel, showNFTPanel}) {
     const profileKey = deso.identity.getUserKey();
-
-    useEffect(() => {
-        getProfilePic();
-        getProfileInfo();
-    }, []);
-
+    
     const [pic, setProfilePic] = useState("");
     const [nFollowers, setNFollowers] = useState();
     const [nFollowing, setNFollowing] = useState();
 
-    const getProfilePic = async () => {
-      const profilePic = await deso.user.getSingleProfilePicture(deso.identity.getUserKey());
-      setProfilePic(profilePic);
-    };
-
-    const getProfileInfo = async () => {
+    useEffect( async () => {
+        const profilePic = await deso.user.getSingleProfilePicture(profileKey);
+        
         const followers = await deso.social.getFollowsStateless({
             "PublicKeyBase58Check": profileKey,
             GetEntriesFollowingUsername: true
@@ -30,9 +22,10 @@ export default function Home({loginResponse, sampleResponse, nUnreadNot, showPos
             "PublicKeyBase58Check": profileKey
         });
         
+        setProfilePic(profilePic);
         setNFollowers(followers.NumFollowers);
         setNFollowing(following.NumFollowers);
-    }
+    }, []);
 
     return (
         <>
