@@ -55,7 +55,7 @@ export default function ProfileCard({ userInfo }) {
                                 <h2 className="profile-text">{userInfo.Profile.Username}</h2>
                                 <p className="profile-text">{description}</p>
                             </div>
-                            <p className="profile-text">{nFollowers} followers · {nFollowing} following</p>
+                            <p className="profile-text">{nFollowers} Followers · {nFollowing} Following</p>
                         </div>
                     </div>
                 </div>
