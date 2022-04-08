@@ -1,10 +1,10 @@
 import Deso from "deso-protocol";
 import { useState } from "react";
-import "./Post.css";
+import "./CreatePost.css";
 
 const deso = new Deso();
 
-export default function Post({userInfo}) {
+export default function CreatePost({userInfo}) {
     const [postResponse, setPostResponse] = useState();
     const [postContent, setPostContent] = useState();
 

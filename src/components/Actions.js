@@ -1,13 +1,14 @@
-import Deso from "deso-protocol";
-import { useEffect, useState } from "react";
+import "./Action.css";
 import Home from "./Home";
-import Post from "./Post";
+import CreatePost from "./CreatePost";
 import NFTGallery from "./NFTGallery";
 import ProfileCard from "./ProfileCard";
-import "./Action.css";
+import Placeholder from "./Placeholder";
+
+import { useEffect, useState } from "react";
+import Deso from "deso-protocol";
 
 const deso = new Deso();
-
 
 export default function Actions() {
     const [userInfo, setUserInfo] = useState();
@@ -95,19 +96,21 @@ export default function Actions() {
                 </div>
                 <div className="panel-content">
                     {
-                        // (
-                        //     !showPostPanel && !showNFTPanel && loginResponse && userInfo &&
-                        //     <Home userInfo={userInfo} /> 
-                        // ) ||
+                        (
+                            !showPostPanel && !showNFTPanel && userInfo &&
+                            <Home userInfo={userInfo} /> 
+                        ) ||
                         (
                             showPostPanel && userInfo && !showNFTPanel &&
-                            <Post userInfo={userInfo} />
+                            <CreatePost userInfo={userInfo} />
                         ) ||
                         (
                             showNFTPanel && !showPostPanel && 
                             <NFTGallery />
                         ) ||
-                        <p className="welcome-msg">Please, Login to continue</p>
+                        <div className="placeholder">
+                            <Placeholder type="login" text="Please, Login to continue" />
+                        </div>
                     }
                 </div>
             </div>
