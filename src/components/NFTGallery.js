@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Deso from "deso-protocol";
+import "./NFTGallery.css";
+
 const deso = new Deso();
 
 export default function NFTGallery() {

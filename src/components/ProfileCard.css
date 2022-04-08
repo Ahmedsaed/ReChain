@@ -1,0 +1,44 @@
+.profile {
+    margin: 0px auto 10px;
+    padding: 6px 4px;
+
+    border: 2px solid #ccc;
+    border-radius: 8px;
+
+    background-color: rgb(80, 148, 226, 0.3);
+
+    font-size: 18px;
+}
+
+.card {
+    display: flex;
+}
+
+.img-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-img {
+    display: inline;
+    margin: 0 auto;
+    margin-left: 0%;
+    /* height: 100%; */
+    width: 105%;
+}
+
+.profile-data {
+    margin: 0px 5px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-text {
+    margin: 0px;
+}

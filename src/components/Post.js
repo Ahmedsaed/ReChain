@@ -1,5 +1,6 @@
 import Deso from "deso-protocol";
 import { useState } from "react";
+import "./Post.css";
 
 const deso = new Deso();
 
