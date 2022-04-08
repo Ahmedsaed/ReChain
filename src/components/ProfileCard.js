@@ -47,7 +47,7 @@ export default function ProfileCard({ userInfo }) {
             {
                 <div className="profile">
                     <div className="card">
-                        <div className="img-cropper">
+                        <div className="profile-img-cropper">
                             <img src={pic} alt="Profile" className="profile-img"></img>
                         </div>
                         <div className="profile-data">
