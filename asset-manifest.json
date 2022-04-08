@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MLH-Hacker-Protal/static/css/main.1d684cbd.css",
-    "main.js": "/MLH-Hacker-Protal/static/js/main.68b26fe3.js",
+    "main.css": "/MLH-Hacker-Protal/static/css/main.d0f9784e.css",
+    "main.js": "/MLH-Hacker-Protal/static/js/main.4895e1e6.js",
     "static/js/787.1f613130.chunk.js": "/MLH-Hacker-Protal/static/js/787.1f613130.chunk.js",
     "index.html": "/MLH-Hacker-Protal/index.html",
-    "main.1d684cbd.css.map": "/MLH-Hacker-Protal/static/css/main.1d684cbd.css.map",
-    "main.68b26fe3.js.map": "/MLH-Hacker-Protal/static/js/main.68b26fe3.js.map",
+    "main.d0f9784e.css.map": "/MLH-Hacker-Protal/static/css/main.d0f9784e.css.map",
+    "main.4895e1e6.js.map": "/MLH-Hacker-Protal/static/js/main.4895e1e6.js.map",
     "787.1f613130.chunk.js.map": "/MLH-Hacker-Protal/static/js/787.1f613130.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d684cbd.css",
-    "static/js/main.68b26fe3.js"
+    "static/css/main.d0f9784e.css",
+    "static/js/main.4895e1e6.js"
   ]
 }
