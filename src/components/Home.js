@@ -51,13 +51,9 @@ export default function Home() {
     return (
         <>
             {
-                (
-                    <div className="hot-feed">
-                        {/* <Post body="hi, there" rePostCount={15} commentCount={90} likeCount={30} diamondCount={50} img={""} userName="Ahmed Saed" userImg={pic}/> */}
-                        {feedPosts}
-                    </div>
-                ) ||
-                <Placeholder type="loading" text="loading" />
+                <div className="hot-feed">
+                    {feedPosts ||  <Placeholder type="loading" text="loading" />}
+                </div>
             }
         </>
     )

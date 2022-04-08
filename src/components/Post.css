@@ -60,3 +60,20 @@
     margin: -1px 5px 0px;
     min-width: 30px;
 }
+
+.post-img-container {
+    text-align: center;  
+}
+
+.post-img {
+    margin: 0px 100px;
+
+    border: 2px solid #5093e2;
+    border-radius: 10px;
+  
+    margin: 5px;
+    width: 60%;
+  
+    object-fit: cover;
+    object-position: bottom;
+}

@@ -34,6 +34,10 @@ export default function Post({ body, rePostCount, commentCount, likeCount, diamo
             </div>
             <div className="post-body">
                 {body}
+                <br/>
+                <div className="post-img-container">
+                    {img && <img src={img} alt="post img" className="post-img"/>}
+                </div>
             </div>
             <div className="post-stats">
                 <div className="post-icon-group">
