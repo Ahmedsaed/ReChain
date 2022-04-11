@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MLH-Hacker-Protal/static/css/main.d0f9784e.css",
-    "main.js": "/MLH-Hacker-Protal/static/js/main.4895e1e6.js",
-    "static/js/787.1f613130.chunk.js": "/MLH-Hacker-Protal/static/js/787.1f613130.chunk.js",
-    "index.html": "/MLH-Hacker-Protal/index.html",
-    "main.d0f9784e.css.map": "/MLH-Hacker-Protal/static/css/main.d0f9784e.css.map",
-    "main.4895e1e6.js.map": "/MLH-Hacker-Protal/static/js/main.4895e1e6.js.map",
-    "787.1f613130.chunk.js.map": "/MLH-Hacker-Protal/static/js/787.1f613130.chunk.js.map"
+    "main.css": "/ReChain/static/css/main.d0f9784e.css",
+    "main.js": "/ReChain/static/js/main.053dda8c.js",
+    "static/js/787.1f613130.chunk.js": "/ReChain/static/js/787.1f613130.chunk.js",
+    "index.html": "/ReChain/index.html",
+    "main.d0f9784e.css.map": "/ReChain/static/css/main.d0f9784e.css.map",
+    "main.053dda8c.js.map": "/ReChain/static/js/main.053dda8c.js.map",
+    "787.1f613130.chunk.js.map": "/ReChain/static/js/787.1f613130.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0f9784e.css",
-    "static/js/main.4895e1e6.js"
+    "static/js/main.053dda8c.js"
   ]
 }
