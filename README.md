@@ -1,10 +1,17 @@
-# MLH Hacker Portal - Deso project
+# ReChain - A Social Media Platform On Blockchain
 
-### [Try It Out](https://ahmedsaed.me/MLH-Hacker-Protal/)
+This project originally started as a submission for some of the "MLH Global Hack Week" hackathon challenges. I plan to rebrand it and continue development
 
-### MLH Global Hack Week Challenges:
+### [Try It Out](https://ahmedsaed.me/ReChain/)
 
-- Build a Social Media Platform on DeSo
-- Build a social media application on Blockchain
-- Get started with DeSo
+### Features
+- View Hot Feed
+- Create a post
+- View a NFT Gallery
+- View user profile
 
+### To-Do List
+- [ ] Rebrand and Redesign 
+- [ ] View number of notifications in the profile card
+- [ ] Add a notifications panel
+- [ ] Add the ability to navigate through the Hot Feed and NFT Galleries
