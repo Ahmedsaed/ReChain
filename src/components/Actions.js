@@ -4,6 +4,7 @@ import CreatePost from "./CreatePost";
 import NFTGallery from "./NFTGallery";
 import ProfileCard from "./ProfileCard";
 import Placeholder from "./Placeholder";
+import ReChainLogo from "../images/Rechain-Logo.png";
 
 import { useEffect, useState } from "react";
 import Deso from "deso-protocol";
@@ -73,7 +74,8 @@ export default function Actions() {
 
     return (
         <div className="App">
-            <h1 className="main-header">MLH Hacker Portal</h1>
+            {/* <h1 className="main-header">MLH Hacker Portal</h1> */}
+            <img className="main-header" src={ReChainLogo} alt=""/>
             <h3 className="secondary-header">Your portal to the Blockchain</h3>
 
             <div className="control-panel">
