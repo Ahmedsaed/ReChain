@@ -13,6 +13,4 @@ This project was originally started as a submission for some of the "MLH Global 
 
 ### To-Do List
 - [ ] Rebrand and Redesign 
-- [ ] View number of notifications in the profile card
-- [ ] Add a notifications panel
 - [ ] Add the ability to navigate through the Hot Feed and NFT Galleries
