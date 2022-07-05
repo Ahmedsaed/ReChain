@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ReChain/static/css/main.d0f9784e.css",
-    "main.js": "/ReChain/static/js/main.1a68b189.js",
+    "main.css": "/ReChain/static/css/main.aa0a4972.css",
+    "main.js": "/ReChain/static/js/main.30c7ea09.js",
     "static/js/787.395d829f.chunk.js": "/ReChain/static/js/787.395d829f.chunk.js",
     "static/media/Rechain-Logo.png": "/ReChain/static/media/Rechain-Logo.c08d068f8f80a162e747.png",
     "index.html": "/ReChain/index.html",
-    "main.d0f9784e.css.map": "/ReChain/static/css/main.d0f9784e.css.map",
-    "main.1a68b189.js.map": "/ReChain/static/js/main.1a68b189.js.map",
+    "main.aa0a4972.css.map": "/ReChain/static/css/main.aa0a4972.css.map",
+    "main.30c7ea09.js.map": "/ReChain/static/js/main.30c7ea09.js.map",
     "787.395d829f.chunk.js.map": "/ReChain/static/js/787.395d829f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0f9784e.css",
-    "static/js/main.1a68b189.js"
+    "static/css/main.aa0a4972.css",
+    "static/js/main.30c7ea09.js"
   ]
 }
