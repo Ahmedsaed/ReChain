@@ -1,0 +1,42 @@
+.not {
+    padding: 6px 4px;
+    margin: 5px;
+
+    border: 2px solid #ccc;
+    border-radius: 8px;
+
+    background-color: rgb(80, 148, 226, 0.3);
+
+    color: white;
+}
+
+.not-header {
+    display: flex;
+    align-items: center;
+}
+
+.not-img-cropper {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.not-usr-img {
+    display: inline;
+    margin: 0 auto;
+    margin-left: 0%;
+    height: 100%;
+    width: 105%;
+}
+
+.not-username {
+    font-size: 1.1rem;
+    margin: 0px 0px 0px 10px;
+    font-weight: bolder;
+}
+
+.not-bold {
+    font-weight: bolder;
+}

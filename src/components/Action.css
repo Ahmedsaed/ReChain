@@ -90,3 +90,25 @@
     color: white;
     box-shadow: inset 0 0 100px 0 #5093e2;
 }
+
+.not-bubble {
+    display: table-cell;
+    vertical-align: middle;
+
+    float: right;
+}
+
+.not-count {
+    background-color: #5093e2;
+    color: white;
+    border-radius: 5px;
+    line-height: 100%;
+    width: 20px;
+    padding: 2px;
+    margin: -10px;
+    transition: ease-out 0.5s;
+}
+
+.selected > .not-bubble > .not-count {
+    background-color: blue;
+}

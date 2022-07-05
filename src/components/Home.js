@@ -11,7 +11,6 @@ export default function Home() {
     const profileKey = deso.identity.getUserKey();
 
     const [feedPosts, setFeedPosts] = useState([]);
-    const [pic, setProfilePic] = useState("");
 
     useEffect(() => {
         let mounted = true;
@@ -20,13 +19,7 @@ export default function Home() {
                 "ResponseLimit": 10
             };
             const response = await deso.posts.getHotFeed(request);
-            
-            
-            const profilePic = await deso.user.getSingleProfilePicture(profileKey);
-            setProfilePic(profilePic);
-            
-            console.log(response.data.HotFeedPage);
-            
+                                    
             const feedData = response.data.HotFeedPage.map((item, index) => {
                 return (
                     <Post 

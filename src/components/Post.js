@@ -20,7 +20,8 @@ export default function Post({ body, rePostCount, commentCount, likeCount, diamo
             setUserPic(response);
         }
         if (mounted) getUserImg();
-        return () => mounted = false;   
+        return () => mounted = false; 
+        // eslint-disable-next-line react-hooks/exhaustive-deps  
     }, [])
 
 

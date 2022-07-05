@@ -21,7 +21,7 @@ export default function NFTGallery() {
         if (mounted) getNFTs();
 
         return () => mounted = false;
-    }, [NFTResponse])
+    }, [])
 
     return (
         <div className="nft-gallery">

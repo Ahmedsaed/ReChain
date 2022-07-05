@@ -15,7 +15,6 @@ export default function ProfileCard({ userInfo }) {
     const [pic, setProfilePic] = useState("");
     const [nFollowers, setNFollowers] = useState();
     const [nFollowing, setNFollowing] = useState();
-    const [nUnreadNot, setNUnreadNot] = useState();
 
     useEffect(() => {
         async function getUserInfo() {
@@ -28,13 +27,7 @@ export default function ProfileCard({ userInfo }) {
             const following = await deso.social.getFollowsStateless({
                 "PublicKeyBase58Check": profileKey
             });
-
-            const request = {
-                "PublicKeyBase58Check": deso.identity.getUserKey()
-            };
-            const response = await deso.notification.getUnreadNotificationsCount(request);
-            
-            setNUnreadNot(response);
+        
             setProfilePic(profilePic);
             setNFollowers(followers.NumFollowers);
             setNFollowing(following.NumFollowers);

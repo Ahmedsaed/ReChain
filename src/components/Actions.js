@@ -4,6 +4,7 @@ import CreatePost from "./CreatePost";
 import NFTGallery from "./NFTGallery";
 import ProfileCard from "./ProfileCard";
 import Placeholder from "./Placeholder";
+import Notifications from "./Notifications";
 import ReChainLogo from "../images/Rechain-Logo.png";
 
 import { useEffect, useState } from "react";
@@ -14,7 +15,9 @@ const deso = new Deso();
 export default function Actions() {
     const [userInfo, setUserInfo] = useState();
     const [showPostPanel, setShowPostPanel] = useState(false);
+    const [showNotPanel, setShowNotPanel] = useState(false);
     const [showNFTPanel, setShowNFTPanel] = useState(false);
+    const [nUnreadNot, setNUnreadNot] = useState();
     const [selected, setSelected] = useState(-1);
 
     useEffect(() => {
@@ -24,6 +27,7 @@ export default function Actions() {
                 PublicKeyBase58Check: deso.identity.getUserKey(),
             });
             setUserInfo(userInfo);
+            updateNotCount();
         }
         if (mounted) getUserInfo();
         return () => mounted = false;
@@ -40,25 +44,47 @@ export default function Actions() {
             if (userInfo) setUserInfo(userInfo);
         }
         else {
+            updateNotCount();
+            setShowNotPanel(false);
             setShowPostPanel(false);
             setShowNFTPanel(false);
         }
         setSelected(0);
     }
 
+    async function updateNotCount() {
+        const request = {
+            "PublicKeyBase58Check": deso.identity.getUserKey()
+        };
+        const response = await deso.notification.getUnreadNotificationsCount(request);
+        setNUnreadNot(response.data.NotificationsCount);
+    }
+
     async function showPost() {
         if (!userInfo)
             return;
         
+        setShowNotPanel(false);
         setShowPostPanel(true);
         setShowNFTPanel(false);
         setSelected(1);
     }
     
+    async function showNot() {
+        if (!userInfo)
+            return;
+        
+        setShowNotPanel(true);
+        setShowPostPanel(false);
+        setShowNFTPanel(false);
+        setSelected(3);
+    }
+
     async function showNFTGallery() {
         if (!userInfo)
             return;
 
+        setShowNotPanel(false);
         setShowNFTPanel(true);
         setShowPostPanel(false);
         setSelected(2);
@@ -69,12 +95,12 @@ export default function Actions() {
         setUserInfo(undefined);
         setShowPostPanel(false);
         setShowNFTPanel(false);
+        setShowNotPanel(false);
         setSelected(-1);
     }
 
     return (
         <div className="App">
-            {/* <h1 className="main-header">MLH Hacker Portal</h1> */}
             <img className="main-header" src={ReChainLogo} alt=""/>
             <h3 className="secondary-header">Your portal to the Blockchain</h3>
 
@@ -84,6 +110,15 @@ export default function Actions() {
                     <div className="btn-group"> 
                         <button className={"panel-btn " + (selected === 0 ? " selected" : " ")} onClick={showHome}>
                             {(!userInfo) ? "Login" : "Home"}
+                        </button>
+                        <button className={"panel-btn " + (selected === 3 ? " selected" : " ")} onClick={showNot}>
+                            Notifications
+                            {
+                                userInfo &&
+                                <div className="not-bubble">
+                                    <span className="not-count">{nUnreadNot}</span>
+                                </div>
+                            }
                         </button>
                         <button className={"panel-btn " + (selected === 1 ? " selected" : " ")} onClick={showPost}>
                             Post
@@ -99,15 +134,19 @@ export default function Actions() {
                 <div className="panel-content">
                     {
                         (
-                            !showPostPanel && !showNFTPanel && userInfo &&
-                            <Home userInfo={userInfo} /> 
+                            !showPostPanel && !showNFTPanel && userInfo && !showNotPanel &&
+                            <Home /> 
                         ) ||
                         (
-                            showPostPanel && userInfo && !showNFTPanel &&
+                            !showPostPanel && !showNFTPanel && userInfo && showNotPanel &&
+                            <Notifications />
+                        ) ||
+                        (
+                            showPostPanel && userInfo && !showNFTPanel && !showNotPanel &&
                             <CreatePost userInfo={userInfo} />
                         ) ||
                         (
-                            showNFTPanel && !showPostPanel && 
+                            showNFTPanel && !showPostPanel && !showNotPanel &&
                             <NFTGallery />
                         ) ||
                         <div className="placeholder">

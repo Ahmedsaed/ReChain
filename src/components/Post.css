@@ -38,6 +38,7 @@
 .post-body {
     padding: 0px 60px;
     margin: 0px 0px 10px;
+    white-space: pre-wrap;
 }
 
 .post-stats {
