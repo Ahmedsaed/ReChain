@@ -10,6 +10,8 @@ This project was originally started as a submission for some of the "MLH Global 
 - Create a post
 - View NFT Gallery
 - View user profile
+- View Notifications
+- Unread notifications counter
 
 ### To-Do List
 - [ ] Rebrand and Redesign 
