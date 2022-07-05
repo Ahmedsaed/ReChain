@@ -5,9 +5,10 @@ This project was originally started as a submission for some of the "MLH Global 
 ### [Try It Out](https://ahmedsaed.me/ReChain/)
 
 ### Features
-- View Hot Feed
+- Stay logged in
+- browse hot feed
 - Create a post
-- View a NFT Gallery
+- View NFT Gallery
 - View user profile
 
 ### To-Do List
