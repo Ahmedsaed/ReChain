@@ -1,3 +1,7 @@
+.create-post {
+    transition: height 1s ease-in-out;
+}
+
 .post-group {
     display: flex;
     flex-direction: row;
@@ -61,4 +65,8 @@
 
     color: white;
     font-weight: bolder;
+}
+
+.user-posts {
+    min-height: 400px;
 }
