@@ -8,8 +8,6 @@ import { useEffect, useState } from "react";
 const deso = new Deso();
 
 export default function Home() {
-    const profileKey = deso.identity.getUserKey();
-
     const [feedPosts, setFeedPosts] = useState([]);
 
     useEffect(() => {

@@ -31,14 +31,14 @@ export default function Notifications() {
                 const user0pic = await deso.user.getSingleProfilePicture(user0);
                 const user1pic = await deso.user.getSingleProfilePicture(user1);
                 
-                if (item.Metadata.TxnType == 'LIKE') {                    
+                if (item.Metadata.TxnType === 'LIKE') {                    
                     const postResponse = await deso.posts.getSinglePost({"PostHashHex": item.Metadata.LikeTxindexMetadata.PostHashHex});
                     const postItem = postResponse.data.PostFound;
                     return (
                         <div className="not" key={index}>
                             <div className="not-header">
                                 <div className="not-img-cropper">
-                                    <img src={user0pic} alt="User Picture" className="not-usr-img"></img>
+                                    <img src={user0pic} alt="User" className="not-usr-img"></img>
                                 </div>
                                 <p>
                                     <span className="not-username">{response0.Profile.Username}</span> liked
@@ -59,7 +59,7 @@ export default function Notifications() {
                         </div>
                     )
                 }
-                else if (item.Metadata.TxnType == 'BASIC_TRANSFER') {
+                else if (item.Metadata.TxnType === 'BASIC_TRANSFER') {
                     const amount = item.Metadata.BasicTransferTxindexMetadata.DiamondLevel;
                     
                     if (amount < 1) return;
@@ -71,7 +71,7 @@ export default function Notifications() {
                         <div className="not" key={index}>
                             <div className="not-header">
                                 <div className="not-img-cropper">
-                                    <img src={user1pic} alt="User Picture" className="not-usr-img"></img>
+                                    <img src={user1pic} alt="User" className="not-usr-img"></img>
                                 </div>
                                 <p>
                                     <span className="not-username">{response1.Profile.Username}</span> gave <span className="not-bold">{amount} {amount > 1 ? "Diamonds" : "Diamond"}</span>
@@ -91,7 +91,7 @@ export default function Notifications() {
                         </div>
                     )
                 }
-                else if (item.Metadata.TxnType == 'SUBMIT_POST') {
+                else if (item.Metadata.TxnType === 'SUBMIT_POST') {
                     const parentHash = item.Metadata.SubmitPostTxindexMetadata.ParentPostHashHex;
                     let parentTag;
 
@@ -120,7 +120,7 @@ export default function Notifications() {
                         <div className="not" key={index}>
                             <div className="not-header">
                                 <div className="not-img-cropper">
-                                    <img src={user0pic} alt="User Picture" className="not-usr-img"></img>
+                                    <img src={user0pic} alt="User" className="not-usr-img"></img>
                                 </div>
                                 <p>
                                     <span className="not-username">{response0.Profile.Username}</span> {(parentTag? "replying to @" : "mentioned @") + response1.Profile.Username} 
@@ -142,7 +142,7 @@ export default function Notifications() {
                         </div>
                     )
                 }
-                else if (item.Metadata.TxnType == 'DAO_COIN_TRANSFER' || item.Metadata.TxnType == 'DAO_COIN_LIMIT_ORDER') {
+                else if (item.Metadata.TxnType === 'DAO_COIN_TRANSFER' || item.Metadata.TxnType === 'DAO_COIN_LIMIT_ORDER') {
                     return;
                 }
                 else {

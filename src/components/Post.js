@@ -10,7 +10,6 @@ import Deso from "deso-protocol";
 const deso = new Deso();
 
 export default function Post({ body, rePostCount, commentCount, likeCount, diamondCount, img, userName, userHash }) {
-
     const [userPic, setUserPic] = useState("");
 
     useEffect(() => {
@@ -23,7 +22,6 @@ export default function Post({ body, rePostCount, commentCount, likeCount, diamo
         return () => mounted = false; 
         // eslint-disable-next-line react-hooks/exhaustive-deps  
     }, [])
-
 
     return (
         <div className="post">

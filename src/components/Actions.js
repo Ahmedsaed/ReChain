@@ -114,7 +114,7 @@ export default function Actions() {
                         <button className={"panel-btn " + (selected === 3 ? " selected" : " ")} onClick={showNot}>
                             Notifications
                             {
-                                userInfo &&
+                                userInfo && nUnreadNot &&
                                 <div className="not-bubble">
                                     <span className="not-count">{nUnreadNot}</span>
                                 </div>
