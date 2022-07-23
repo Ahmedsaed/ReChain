@@ -8,3 +8,61 @@
     object-fit: cover;
     object-position: bottom;
 }
+
+.NFT-btn-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.NFT-btn {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0px 0px;
+
+    position: relative;
+    display: inline-block;
+
+    
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #5093e2;
+    
+    background: transparent;
+    cursor: pointer;
+    
+    border: 2px solid #5093e2;
+    box-shadow: inset 0 0 0 0 #5093e2;
+    transition: ease-out 0.5s;
+
+}
+
+.NFT-btn:hover {
+    color: white;
+    box-shadow: inset 0 0 100px 0 #5093e2;
+}
+
+.NFT-btn:active {
+    transform: scale(0.9);
+}
+
+.NFT-right-btn {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.NFT-left-btn {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.NFT-batch-view {
+    color: white;
+    background-color: #5093e2;
+    padding: 10px 15px;
+    margin: 10px 0px 0px;
+    width: fit-content;
+    border: 2px solid #5093e2;
+    white-space: nowrap;
+}

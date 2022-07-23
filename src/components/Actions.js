@@ -107,7 +107,7 @@ export default function Actions() {
             <div className="control-panel">
                 <div className="side-panel">
                     {userInfo && <ProfileCard userInfo={userInfo} />}
-                    <div className="btn-group"> 
+                    <div className="home-btn-group"> 
                         <button className={"panel-btn " + (selected === 0 ? " selected" : " ")} onClick={showHome}>
                             {(!userInfo) ? "Login" : "Home"}
                         </button>
